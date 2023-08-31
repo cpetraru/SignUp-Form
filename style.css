@@ -1,64 +1,52 @@
-/* set font-size to 16px to use EM */
+/* root elements */
 :root {
   font-size: 16px;
 }
 
-/* remove margin, padding and add border-box to all elements */
+body,
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* make page be full page in height and enable flexbox */
-body {
-  height: 100vh;
-  width: 100vw;
-}
+/* split content between two sides */
 
-/* enable flex box on content */
-.content-wrapper {
+.content-wrapper,
+.hero {
   display: flex;
+  flex-flow: row wrap;
 }
 
-/* add background and styles to hero */
+.content-wrapper {
+  height: 100vh;
+}
+
+/* ================= */
+
+/* left side styling */
 .hero-wrapper {
   background-image: url("./assets/background.png");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 40%;
-  position: relative;
+  background-position: center;
+  width: 40vw;
 }
 
-/* make hero design and banner */
+/* hero styling */
 .hero {
-  height: 20%;
-  background-color: rgba(219, 237, 237, 0.5);
-  position: absolute;
-  top: 25%;
-  width: 100%;
-  display: flex;
+  background-color: rgba(92, 99, 97, 0.297);
+  padding: 15px 0;
   justify-content: center;
-  gap: 1.2em;
-  padding: 15px;
-}
+  align-items: center;
 
-.hero h1 {
-  font-size: 1.5em;
+  position: relative;
+  top: 25vh;
+  gap: 3em;
   color: white;
-  align-self: center;
+  font-size: 2vh;
 }
 
-/* set width and height to 100% and enable display flex */
-
-.content-right {
-  width: 100%;
-  height: 100vh;
-  padding: 0 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: rgba(255, 255, 255, 0.943);
+.hero img {
+  height: 15vh;
 }
