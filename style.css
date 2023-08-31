@@ -1,6 +1,8 @@
 /* root elements */
 :root {
   font-size: 16px;
+  --line-height: calc(2em + 0.1vh);
+  --txt-color: rgba(146, 146, 146, 0.97);
 }
 
 body,
@@ -8,6 +10,8 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
 }
 
 /* split content between two sides */
@@ -27,7 +31,7 @@ body,
 /* left side styling */
 .hero-wrapper {
   background-image: url("./assets/background.png");
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   width: 40vw;
@@ -49,4 +53,83 @@ body,
 
 .hero img {
   height: 15vh;
+}
+
+/* ================= */
+
+/* right side styling */
+.content-right {
+  display: flex;
+  width: 60vw;
+  background-color: rgba(241, 241, 241, 0.514);
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+/* right side content description */
+
+.description-wrapper,
+.submit-wrapper,
+.form-wrapper {
+  padding: 0 calc(2em + 0.1vw);
+}
+p {
+  font-size: 1.2em;
+  font-weight: 550;
+  line-height: var(--line-height);
+}
+
+.description-wrapper .last-text {
+  padding: 1em 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* form styling */
+.form-wrapper {
+  -webkit-box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
+  box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+.input {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  gap: 8px;
+}
+
+label,
+input {
+  text-transform: uppercase;
+  color: var(--txt-color);
+}
+
+input {
+  height: 3em;
+  border: 0.5px solid var(--txt-color);
+  padding: calc(1.2em + 0.1vw);
+  border-radius: 15px;
+  font-weight: 550;
+  font-size: 1;
+}
+
+/* login style */
+.submit-wrapper {
+  padding-top: 3em;
+  line-height: var(--line-height);
 }
