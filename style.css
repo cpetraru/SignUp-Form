@@ -12,6 +12,8 @@
 
 /* make page be full page in height and enable flexbox */
 body {
+  height: 100vh;
+  width: 100vw;
 }
 
 /* enable flex box on content */
@@ -26,5 +28,37 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  width: 30vw;
+  width: 40%;
+  position: relative;
+}
+
+/* make hero design and banner */
+.hero {
+  height: 20%;
+  background-color: rgba(219, 237, 237, 0.5);
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+  padding: 15px;
+}
+
+.hero h1 {
+  font-size: 1.5em;
+  color: white;
+  align-self: center;
+}
+
+/* set width and height to 100% and enable display flex */
+
+.content-right {
+  width: 100%;
+  height: 100vh;
+  padding: 0 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.943);
 }
