@@ -20,7 +20,7 @@
 
       <!-- Wrapper for the right side content -->
       <div class="content-right">
-        <div class="description-wrapper">
+        <div class="description-wrapper padding">
           <p>This is not a real online service!</p>
           <p>
             You know you need something like this in your life to help you
@@ -34,46 +34,63 @@
 
         <!-- Wrapper for the form -->
         <div class="form-wrapper">
-          <p>Let's do this!</p>
           <!-- Splitting the form into two sides -->
-          <form action="post">
-            <!-- Left side of the form -->
+          <form action="#">
             <div class="form">
-              <div class="input">
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" />
+              <div class="form-title padding">
+                <h2>Let's do this!</h2>
               </div>
-              <div class="input">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+              <div class="form-inputs padding">
+                <div class="input">
+                  <label for="first-name">First Name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+                <div class="input">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" name="last-name" id="last-name" required />
+                </div>
+                <div class="input">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" name="phone" id="phone" required />
+                </div>
+                <div class="input">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input
+                    type="password"
+                    name="conf-password"
+                    id="conf-password"
+                    required
+                  />
+                </div>
               </div>
-              <div class="input">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-              </div>
-              <div class="input">
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" />
-              </div>
-              <div class="input">
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" />
-              </div>
-              <div class="input">
-                <label for="confirm-password">Confirm Password</label>
-                <input
-                  type="password"
-                  name="conf-password"
-                  id="conf-password"
-                />
-              </div>
+            </div>
+
+            <div class="submit-button padding">
+              <input type="submit" value="Create Account" />
             </div>
           </form>
         </div>
 
-        <!-- Wrapper for the create and login buttons -->
-        <div class="submit-wrapper">
-          <a href="#" class="submit">Create Account</a>
+        <!-- Wrapper for login buttons -->
+        <div class="submit-wrapper padding">
           <p>Already have an account? <a href="#">Log in</a></p>
         </div>
       </div>

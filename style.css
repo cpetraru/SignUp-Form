@@ -14,16 +14,28 @@ body,
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  min-height: 100%; /* Look, it's not fixed anymore! */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  height: 100%;
+  flex-grow: 1;
+}
+
 /* split content between two sides */
 
 .content-wrapper,
 .hero {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
 .content-wrapper {
-  height: 100vh;
+  height: 100%;
 }
 
 /* ================= */
@@ -35,6 +47,8 @@ body,
   background-repeat: no-repeat;
   background-position: center;
   width: 40vw;
+
+  /* height: 100%; */
 }
 
 /* hero styling */
@@ -43,9 +57,9 @@ body,
   padding: 15px 0;
   justify-content: center;
   align-items: center;
-
   position: relative;
   top: 25vh;
+
   gap: 3em;
   color: white;
   font-size: 2vh;
@@ -60,7 +74,8 @@ body,
 /* right side styling */
 .content-right {
   display: flex;
-  width: 60vw;
+  width: 100%;
+  height: 100%;
   background-color: rgba(241, 241, 241, 0.514);
   flex-flow: column nowrap;
   justify-content: center;
@@ -68,11 +83,10 @@ body,
 
 /* right side content description */
 
-.description-wrapper,
-.submit-wrapper,
-.form-wrapper {
+.padding {
   padding: 0 calc(2em + 0.1vw);
 }
+
 p {
   font-size: 1.2em;
   font-weight: 550;
@@ -88,19 +102,21 @@ p {
 }
 
 /* form styling */
-.form-wrapper {
+
+.form {
   -webkit-box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
   box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
   background-color: white;
-  display: flex;
-  flex-flow: column;
-  gap: 20px;
-
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-bottom: 3em;
 }
 
-.form {
+.form .form-title {
+  padding-bottom: 2em;
+}
+
+.form-inputs {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
@@ -130,6 +146,6 @@ input {
 
 /* login style */
 .submit-wrapper {
-  padding-top: 3em;
+  padding-top: 0.8em;
   line-height: var(--line-height);
 }
