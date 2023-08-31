@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Wrapper for container to enable flexbox -->
+    <div class="content-wrapper">
+      <!-- Wrapper for the hero left side -->
+      <div class="hero-wrapper">
+        <div class="hero">
+          <h1><img src="./assets/odin-lined.png" alt="" /> DO IT</h1>
+        </div>
+      </div>
+
+      <!-- Wrapper for the right side content -->
+      <div class="content-right">
+        <div class="description-wrapper">
+          <h2>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <span class="italic">now</span> to get started.
+          </h2>
+          <p>You <span class="italic">know</span> you want to.</p>
+        </div>
+
+        <!-- Wrapper for the form -->
+        <div class="form-wrapper">
+          <div class="form">
+            <!-- Splitting the form into two sides -->
+            <!-- Left side of the form -->
+            <div class="left-form">
+              <label for="first-name">First Name</label>
+              <input type="text" name="first-name" id="first-name" />
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </div>
+
+            <!-- Right side of the form -->
+            <div class="right-form">
+              <label for="last-name">Last Name</label>
+              <input type="text" name="last-name" id="last-name" />
+
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" id="phone" />
+
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" name="conf-password" id="conf-password" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Wrapper for the create and login buttons -->
+        <div class="submit-wrapper">
+          <a href="#" class="submit">Create Account</a>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
