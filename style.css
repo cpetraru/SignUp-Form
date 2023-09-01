@@ -3,6 +3,8 @@
   font-size: 16px;
   --line-height: calc(2em + 0.1vh);
   --txt-color: rgba(146, 146, 146, 0.97);
+  --link-color: rgba(16, 83, 24, 0.596);
+  --txt-focus: rgba(0, 0, 0, 0.85);
 }
 
 body,
@@ -14,18 +16,6 @@ body,
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  min-height: 100%; /* Look, it's not fixed anymore! */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  height: 100%;
-  flex-grow: 1;
-}
-
 /* split content between two sides */
 
 .content-wrapper,
@@ -34,8 +24,14 @@ body {
   flex-flow: row nowrap;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .content-wrapper {
   height: 100%;
+  border: 1px solid black;
 }
 
 /* ================= */
@@ -43,12 +39,10 @@ body {
 /* left side styling */
 .hero-wrapper {
   background-image: url("./assets/background.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 40vw;
-
-  /* height: 100%; */
 }
 
 /* hero styling */
@@ -76,9 +70,10 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(241, 241, 241, 0.514);
+  background-color: rgba(239, 239, 239, 0.747);
   flex-flow: column nowrap;
   justify-content: center;
+  border: 1px solid black;
 }
 
 /* right side content description */
@@ -104,8 +99,8 @@ p {
 /* form styling */
 
 .form {
-  -webkit-box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
-  box-shadow: 11px 11px 7px -6px rgba(0, 0, 0, 0.84);
+  -webkit-box-shadow: 5px 5px 15px -5px #000000;
+  box-shadow: 5px 5px 15px -5px #000000;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -129,13 +124,13 @@ p {
   gap: 8px;
 }
 
-label,
-input {
+.input label,
+.input input {
   text-transform: uppercase;
   color: var(--txt-color);
 }
 
-input {
+.input input {
   height: 3em;
   border: 0.5px solid var(--txt-color);
   padding: calc(1.2em + 0.1vw);
@@ -149,3 +144,38 @@ input {
   padding-top: 0.8em;
   line-height: var(--line-height);
 }
+
+.submit-button button {
+  background-color: var(--link-color);
+  padding: 25px;
+  width: 25%;
+  border-radius: 50px;
+  border: 1px solid rgba(16, 83, 24, 0.3);
+  -webkit-box-shadow: 5px 5px 15px -5px #000000;
+  box-shadow: 5px 5px 10px -10px #000000;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.submit-wrapper a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* validation */
+.input input:focus {
+  outline: none;
+  border: 2px solid var(--txt-focus);
+  color: var(--txt-focus);
+}
+
+.input input:invalid {
+  /* border: 1px solid red; */
+  color: rgba(255, 0, 0, 0.932);
+}
+
+/* mobile navigation */
+/* @media only screen and (max-width: 600px) {
+    
+} */
